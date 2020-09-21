@@ -1,0 +1,9 @@
+.shirt-space {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.wear-list {
+	display: flex;
+}

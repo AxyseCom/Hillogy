@@ -1,0 +1,246 @@
+/*####################################
+  ---------------######---------------
+  ####################################*/
+@zakat: radial-gradient( #A1F1F7, #EEECD3, #23a6d5, #87d9e0);
+@rasvet: radial-gradient( #A1F1F7, #EEECD3, #23a6d5, #191452, #050410);
+
+.mainBox {
+  height: 300px;
+  width: 300px;
+  background: @zakat;
+  border-radius: 50%;
+  box-shadow: 0 0 100px #87d9e0,
+             inset  0 0 10px #87d9e0;
+  margin: auto;
+  transition: all 5s ease;
+  -webkit-transition: all 5s ease;
+  overflow: hidden;
+  position: relative;
+  a {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1000;
+    left: 0px;
+  }
+}
+
+.planet {
+  height: 111px;
+  width: 111px;
+  background: #2FB134;
+  text-align: center;
+  margin: auto;
+  margin-top: 96px;
+  line-height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px #EEECD3;
+  animation: rasvet 20s linear;
+  z-index: 1;
+  position: absolute;
+  left: 93px;
+  overflow: hidden;
+  button{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10000;
+    transition: 1s linear;
+  }
+  button:hover {
+    color: #e92d85;
+    transition: 1s linear;
+  }
+}
+
+.shadow {
+  height: 150px;
+  width: 150px;
+  background: #181853;
+  box-shadow: 0 0 100px #181853;
+  opacity: 0.5;
+  margin: auto;
+  margin-top: 145px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  top: -145px;
+  right: -100px;
+  animation: shad 20s linear infinite;
+}
+
+@keyframes shad {
+  0%{transform: translate(0%,30%);}
+  40%{transform: translate(-60%,10%);}
+  70%{transform: translate(-100%,20%);}
+  100%{transform: translate(-150%,10%);}
+}
+
+.sun {
+  height: 60px;
+  width: 60px;
+  background: #f0ecac;
+  line-height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px 40px #f0ecac;
+  animation: sun 20s linear infinite;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  z-index: 0;
+}
+
+@keyframes rasvet {
+  0%{box-shadow: 0 0 50px 10px #EEECD3;}
+  50%{box-shadow: 0 0 300px 50px #B800A5;}
+  100%{box-shadow: 0 0 50px 10px #EEECD3;}
+}
+
+@keyframes sun {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: 0px;
+    left: 400px;
+  }
+}
+
+.ocen1 {
+  height: 70px;
+  width: 70px;
+  margin-top: -100px;
+  margin-left: -30px;
+  background: #0EAFF1;
+  border-radius: 50%;
+}
+.ocen2 {
+  height: 70px;
+  width: 70px;
+  margin-left: -20px;
+  margin-top: -20px;
+  background: #0EAFF1;
+  border-radius: 50%;
+}
+
+.oblako1 {
+  height: 10px;
+  width: 40px;
+  margin-left: 22px;
+  margin-top: -33px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  z-index: 30;
+  animation: obl1 5s linear infinite;
+}
+.oblako2 {
+  height: 10px;
+  width: 40px;
+  margin-left: 22px;
+  margin-top: -33px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index: 30;
+  animation: obl2 5s linear infinite;
+}
+
+@keyframes obl1 {
+  from {left: -120px}
+    to{left: 140px;}
+}
+@keyframes obl2 {
+  from {left: -100px}
+    to{left: 80px;}
+}
+
+.oblako3 {
+  height: 10px;
+  width: 40px;
+  margin-left: 22px;
+  margin-top: -33px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: 30;
+  animation: obl3 5s linear infinite;
+}
+.oblako4 {
+  height: 10px;
+  width: 40px;
+  margin-left: 22px;
+  margin-top: -33px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  z-index: 30;
+  animation: obl4 5s linear infinite;
+}
+@keyframes obl3 {
+  from {left: -100px}
+    to{left: 180px;}
+}
+@keyframes obl4 {
+  from {left: -120px}
+    to{left: 120px;}
+}
+.antarctida {
+  height: 70px;
+  width: 70px;
+  margin-left: 22px;
+  margin-top: -33px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.star {
+  height: 2px;
+  width: 17px;
+  background: #fff;
+  box-shadow: -18px 0 3px  #FFC747;
+  position: absolute;
+  left: -10px;
+  top: 100px;
+  z-index: 50;
+  animation: star 5s linear infinite;
+}
+
+@keyframes star {
+  from{left: -10px;}
+  to{left: 500px;}
+}
+
+.star2 {
+  height: 2px;
+  width: 17px;
+  background: #fff;
+  box-shadow: 13px 0px  3px  #FFC747;
+  position: absolute;
+  right: -10px;
+  top: 200px;
+  z-index: 50;
+  animation: star2 5s linear infinite;
+}
+
+@keyframes star2 {
+  from{right: -10px;}
+  to{right: 500px;}
+}
+
+/*####################################
+  ---------------######---------------
+  ####################################*/
